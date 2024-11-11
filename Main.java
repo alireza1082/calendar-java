@@ -1,10 +1,7 @@
-import java.util.Calendar;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    static Calendar calendar = new JalaliCalendar();
     static int year;
     static int month;
     static String monthName;
@@ -96,7 +93,7 @@ public class Main {
                         "\t\tدوشنبه" +
                         "\t\tبكشنبه" +
                         "\t\tشنبه\n");
-        int startIndex = 0;
+        int startIndex;
         for (int i = 0; i < 5; i++) {
             if (i == 0) startIndex = 7 - calculateFirstDate();
             else startIndex = 7 * i + calculateFirstDate();
@@ -107,14 +104,5 @@ public class Main {
             }
             System.out.print("\n");
         }
-    }
-    enum Date {
-        Saturday,
-        Sunday,
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
     }
 }
